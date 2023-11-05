@@ -208,7 +208,15 @@ h6 {
     pointer-events: none;
     transition: transform ease-out .1s
 }
+.content__form label i {
 
+    margin: 45px 0px ;
+    padding: 9px;
+
+    cursor: pointer;
+    
+
+}
 .content__form input {
     width: 100%;
     background: inherit;
@@ -219,6 +227,7 @@ h6 {
     font-size: 16px;
     vertical-align: middle;
 }
+
 
 .content__form input:valid+span {
     transform: scale(calc(10 / 12)) translateY(-10px);
@@ -302,6 +311,8 @@ h6 {
     padding: 7px 16px;
     cursor: pointer;
 }
+
+
 
 .content__form button:hover {
     background: rgb(24, 119, 242);
@@ -753,3 +764,5 @@ q {
     background: rgb(0, 149, 246);
     opacity: .7;
 }
+
+
