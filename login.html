@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous">
-    <link rel="icon" type="img/vicon.png" href="/img/vicon.png">
-    <link rel="stylesheet" href="base.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="img/vicon.png" href="/img/vicon.png" />
+    <link rel="stylesheet" href="base.css" />
     <title>تسجيل الدخول</title>
-</head>
+  </head>
 
-<body dir="rtl">
-
+  <body dir="rtl">
     <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top header-transparent">
-          <div class="container d-flex align-items-center justify-content-between">
-            <div class="logo">
-            <a href="index.html"><span><img src="/img/Vlogo.png" height="220"></span></a>
-            </div>           
-          </div>
-        </header>
+    <header id="header" class="fixed-top header-transparent">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href="index.html"
+            ><span><img src="/img/Vlogo.png" height="220" /></span
+          ></a>
+        </div>
+      </div>
+    </header>
     <!-- End Header -->
 
-  
-  <main id="main">
-    
-    <div class="main-container">             
-      <div class="container">
-              <div class="row content">
-                <div class="col-md-6 mb-3">
-                  <h3 class="signin-text mb-1" style="text-align:center;"> مرحبا بك</h3>
-                  <h6 class="signin-text mb-5" style="text-align:center;"> هيا لنكتشف العالم سويا</h6>
+    <div class="main-container">
+      <div class="grid-container">
+        <div class="leftlgn" >
+          <h3 class="signin-text mb-1" style="text-align: center">مرحبا بك</h3>
+                <h6 class="signin-text mb-5" style="text-align: center">
+                  هيا لنكتشف العالم سويا
+                </h6>
 
-                  <form method="POST" action="login" class="content__form">
-                    <div class="content__inputs">
-                      <label>
-                        <input required="" type="text" >
-                        <span >اسم المستخدم / البريد الالكتروني  </span>
-                      </label>
-                      <label>
-                        <input required="" type="password" id="password">
-                        <span>كلمة المرور</span>
-                        <i class="bi bi-eye-slash" id="togglePassword" ></i>
-                      </label>
+                <form method="POST" action="login" class="content__form">
+                  <div class="content__inputs">
+                    <label>
+                      <input required="" type="text" />
+                      <span>اسم المستخدم / البريد الالكتروني </span>
+                    </label>
+                    <label>
+                      <input required="" type="password" id="password" />
+                      <span>كلمة المرور</span>
+                      <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </label>
+                  </div>
+                  <button>تسجيل الدخول</button>
+                </form>
+                <div class="content__or-text">
+                  <span></span>
+                  <span>او </span>
+                  <span></span>
+                </div>
 
-                    </div>
-                    <button>تسجيل الدخول</button>
-                  </form>
-                  <div class="content__or-text">
-                    <span></span>
-                    <span>او </span>
-                    <span></span>
-                  </div>
-                  <div class="content__forgot-buttons">
-                    <button>
-                      <img src="img/google.png" style="">
-                      <span>سجل عن طريق جوجل</span>
-                    </button>
-                    <a href="signup.html"> <p  class="login-link f1">لا يوجد ليدك حساب ؟ اضغط هنا !</p></a>
-                  </div>
+                <div class="content__forgot-buttons">
+                  <button>
+                    <img src="img/google.png" style="" />
+                    <span>سجل عن طريق جوجل</span>
+                  </button>
+                  <a href="signup.html">
+                    <p class="login-link f1">لا يوجد ليدك حساب ؟ اضغط هنا !</p></a>
                 </div>
-                <div class="col-md-6 mb-3 right-container">
-                  <img src="img/right.svg" style="">
-                </div>
-              </div>
+        
       </div>
+      <div class="rightlgn " ><img src="img/right.svg" style="" /></div>
     </div>
-  </main>
 
     <!-- ======= Footer ======= -->
 
-          <footer class="text-center text-white " id="footer">
-            <div class="text-center p-3 copyright" >
-              © 2023 Copyright: 
-              <a class="text-white" href="https://vigual.com/">vigual</a>
-            </div>
-        </footer>
+    <footer class="text-white" id="footer">
+      <div class="text-center p-3 copyright">
+        © 2023 Copyright:
+        <a class="text-white" href="https://vigual.com/">vigual</a>
+      </div>
+    </footer>
     <!-- End Footer -->
-  
-</body>
+  </body>
 
-<script src="./app.js"></script>
+  <script src="./app.js"></script>
 </html>

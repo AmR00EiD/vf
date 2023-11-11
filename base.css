@@ -34,9 +34,8 @@ h6 {
 ------------------------------------------------------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
-  padding: 24px 0;
-  background: rgba(103, 176, 209, 0.8);
+  padding: 20px 0;
+  z-index: 1;
 }
 
 #header.header-transparent {
@@ -88,6 +87,7 @@ h6 {
   width: 100%;
   text-align: center;
   transition: all 0.5s;
+  max-height: fit-content;
 }
 
 #footer .copyright {
@@ -104,65 +104,54 @@ h6 {
 
 .main-container {
   display: flex;
-  width: 100%;
-  height: 80vh;
+  height: inherit;
   background-color: rgb(0, 0, 0, 0);
-  margin: 10vh 0 0 0;
   border-radius: 12px;
-}
-
-.main-container .hidden {
-  display: none;
-}
-
-.left-container {
-  width: 50%;
-  height: auto;
-  margin: 0 80px 0 0;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0 0 0 0;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  border-radius: 52% 48% 82% 18% / 57% 44% 56% 43%;
+  justify-content: center;
+  margin: 13vh 0;
+}
+
+.grid-container {
+  display: grid;
+  column-count: 2;
+  grid-template-columns: 50%;
+  grid-column-end: span 2;
+  grid-gap: 2px;
+  background-color: #ffffff;
+  padding: 40px;
+  width: 70%;
+  grid-template-areas: "left right";
 }
 
 /*------------------------------------------------------------------------------------------------------------
 # login form
 ------------------------------------------------------------------------------------------------------------*/
 
-.content {
-  flex-direction: row;
-  align-items: center;
-  margin: 2%;
-  width: 100%;
-  height: 80vh;
-  background-color: #fff;
-  padding: 4rem 1rem 4rem 1rem;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+.leftlgn,
+.rightlgn {
+  align-content: center;
+  height: inherit; /* Should be removed. Only for demonstration */
 }
 
-.right-container {
-  width: 40%;
-  height: 100%;
+/* Style the left column */
+.leftlgn {
+  grid-area: left;
+  padding: 20px 0 0 50px;
 }
-.right-container img {
-  width: 100%;
-  height: inherit;
+
+/* Style the right column */
+.rightlgn {
+  grid-area: right;
 }
 
 .signin-text {
   font-style: normal;
-  font-weight: 750 !important;
-}
-
-.content i {
-  margin-bottom: 41px;
+  font-weight: 550 !important;
 }
 
 .content__form {
-  margin: 10% 10% 5% 10%;
+  margin: 10%;
   display: flex;
   flex-direction: column;
   row-gap: 14px;
@@ -172,16 +161,17 @@ h6 {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+  width: auto;
 }
 
 .content__form label {
   display: flex;
   align-items: center;
   position: relative;
-  min-width: 268px;
-  height: 38px;
+  min-width: 184px;
+  height: 40px;
   background: rgb(250, 250, 250);
-  border-radius: 3px;
+  border-radius: 77px;
 }
 
 .content__form span {
@@ -208,6 +198,7 @@ h6 {
   text-overflow: ellipsis;
   font-size: 16px;
   vertical-align: middle;
+  border-radius: 77px;
 }
 
 .content__form input:valid + span {
@@ -215,7 +206,7 @@ h6 {
 }
 
 .content__form input:valid {
-  padding: 14px 0 2px 8px;
+  padding: 10px 22px 0px 8px;
   font-size: 12px;
 }
 
@@ -467,25 +458,31 @@ h6 {
 ------------------------------------------------------------------------------------------------------------*/
 
 @media (max-width: 950px) {
-  .left-container {
-    margin: 10px 50px 0px 50px;
-    height: 100%;
-    width: 100%;
-  }
-
   .main-container {
-    height: 80vh;
+    display: flex;
+    height: inherit;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 13vh 0;
   }
 
-  .main-container h1 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+  .grid-container {
+    display: grid;
+    column-count: 2;
+    grid-template-columns: 50%;
+    grid-column-end: span 2;
+    grid-gap: 4px;
+    background-color: #ffffff;
+    width: 80%;
+    justify-content: space-evenly;
+    grid-template-areas: "right" "left ";
   }
-}
-
-@media (max-width: 768px) {
-  .right-container {
-    display: none;
+  .leftlgn {
+    padding: 0 0 0 0;
+  }
+  #header .logo img {
+    filter: invert(1);
   }
 }
 @media (max-width: 950px) {
@@ -509,22 +506,6 @@ h6 {
   .overlay {
     width: 69px;
     height: 89px;
-  }
-}
-
-@media (max-width: 550px) {
-  .main-container {
-    display: block;
-    width: 90%;
-  }
-
-  .right-container {
-    display: none;
-  }
-
-  .left-container {
-    margin: 10px 0px 0px 0px;
-    width: 100%;
   }
 }
 
