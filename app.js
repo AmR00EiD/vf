@@ -1,85 +1,81 @@
+/////////////////////// dark mode /////////////////////////////
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Get the checkbox element
+  let checkbox = document.querySelector("input");
+
+  // Get the body tag
+  let body = document.querySelector("body");
+
+  // This event handler listens for the checkbox to be checked or unchecked
+  // Then, if the checkbox is checked (event.target.checked == true)
+  // Then apply `data-theme="dark"` to the body tag
+  // Otherwise, remove the attribute
+  checkbox.addEventListener("change", (event) => {
+    event.target.checked
+      ? body.setAttribute("data-theme", "dark")
+      : body.removeAttribute("data-theme");
+  });
+});
+
 /// password hide and show password ////
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
 
-    togglePassword.addEventListener('click', () => {
-            // Toggle the type attribute using
-            // getAttribure() method
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // Toggle the eye and bi-eye icon
-            this.classList.toggle('bi bi-eye');
-            
-        });
+const input = document.querySelector(".input__field");
+const inputIcon = document.querySelector(".input__icon");
 
+inputIcon.addEventListener("click", (e) => {
+  e.preventDefault();
 
+  inputIcon.setAttribute(
+    "src",
+    input.getAttribute("type") === "password"
+      ? "img/eye-off.svg"
+      : "img/eye.svg"
+  );
 
+  input.setAttribute(
+    "type",
+    input.getAttribute("type") === "password" ? "text" : "password"
+  );
+});
 
+/// slide in choose ////
 
-// const togglePassword = document.querySelector('#togglePassword');
-// togglePassword.addEventListener('click', () => {
-//     const input = document.querySelector('#password');
-//     input.getAttribute('type') === 'password' ? input.setAttribute('type', 'text') : input.setAttribute('type', 'password');
+var slideIndex = 1;
+showSlides(slideIndex);
 
-//    if (input.getAttribute('type') === 'text'){
-//      togglePassword.innerHTML = '<i class="bi-eye-slash  " id="togglePassword"></i>';
-//   } else{
-//      togglePassword.innerHTML = '<i class="bi-eye" aria-hidden="true" id="togglePassword"></i>';
-//   }
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
 
-// });
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+window.onload = function () {
+  setInterval(function () {
+    plusSlides(1);
+  }, 3000);
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-// document.onreadystatechange = function () {
-//             if (document.readyState !== "complete") {
-//                 document.querySelector(
-//                     "body").style.visibility = "hidden";
-//                 document.querySelector(
-//                     ".loader").style.visibility = "visible";
-//             } else {
-//                 document.querySelector(
-//                     ".loader").style.display = "none";
-//                 document.querySelector(
-//                     "body").style.visibility = "visible";
-//             }
-//         };
-
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-// }        
+function frbtn() {
+  document.getElementsByClassName("content").style.backgroundColor = "red";
+}
