@@ -39,7 +39,7 @@
   --box-shadow-color: rgba(206, 178, 252, 0.48);
 
   --bg--index: linear-gradient(rgba(1, 13, 19, 0.5), rgba(55, 142, 181, 0.2)),
-    url("/img/pexels-jessica-lewis-998587.jpg") top center;
+    url("img/pexels-jessica-lewis-998587.jpg") top center;
   --bg-all: #ffff;
 
   --section-bg: #f4f9fc;
@@ -63,7 +63,7 @@ body[data-theme="dark"] {
   --swit-bg: var(--cont-main, 05);
 
   --bg--index: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 75%)),
-    url(/img/pexels-jessica-lewis-998587.jpg) top center;
+    url(img/pexels-jessica-lewis-998587.jpg) top center;
   --bg-all: #3f3f3f;
   --section-bg: #2f2f2f;
   scroll-behavior: smooth;
@@ -1129,7 +1129,7 @@ section {
   transform: translate(-50%, -50%);
   width: 122px;
   height: 66px;
-  background: url(../img/section-title-bg.png) no-repeat;
+  background: url(img/section-title-bg.png) no-repeat;
   z-index: -1;
 }
 .section-title p {
