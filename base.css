@@ -33,7 +33,7 @@
   --side-lg-bg: url(img/Palette-pana.svg);
 
   /*--card--*/
-  --bg-color: #385185;
+  --bg-color: #12629b;
   --bg-color-light: #ffff;
   --text-color-hover: #fff;
   --box-shadow-color: rgba(206, 178, 252, 0.48);
@@ -106,6 +106,7 @@ h6 {
 
 #header.header-scrolled {
   padding: 12px;
+  background: var(--page-bg);
 }
 
 #header .logo h1 {
@@ -691,12 +692,66 @@ h6 {
   .choose-area {
     display: grid;
     column-count: 2;
-    grid-template-areas: "right" "left ";
     align-items: center;
     justify-items: center;
     justify-content: center;
     align-content: center;
     padding: 14px 0;
+  }
+  .card {
+    width: 100%;
+    height: 251px;
+    background: var(--cont-main);
+    border-radius: 96% 4% 99% 1% / 2% 99% 1% 98%;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 20px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .overlay {
+    width: 100px;
+    position: absolute;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 40px;
+    left: 10px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    margin: 0 6px;
+  }
+
+  .circle:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: -3px;
+    left: 1px;
+    transition: opacity 0.3s ease-out;
   }
 }
 
@@ -922,4 +977,80 @@ q {
 .input__icon {
   padding: 5px 5px 5px 15px;
   width: 38px;
+}
+
+/*--------------------------------------------------------------
+# index page
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(1, 13, 19, 0.5), rgba(55, 142, 181, 0.2)),
+    url("/img/pexels-jessica-lewis-998587.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -90px;
+}
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-family: "Cairo", sans-serif;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 70px;
+  color: var(--text-color-hover);
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+#hero h2 {
+  color: var(--bg-color-light);
+  font-family: "Almarai", sans-serif;
+  margin-bottom: 70px;
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: 100;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+#hero .btn-get-started {
+  font-size: 36px;
+  display: inline-block;
+  padding: 4px 0;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  margin: 10px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  /* border: 2px solid #fff; */
+  color: rgb(255, 255, 255);
+}
+#hero .btn-get-started:hover {
+  padding-top: 8px;
+  background: rgba(153, 185, 218, 0.15);
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
