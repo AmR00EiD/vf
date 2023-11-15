@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Cairo:wght@500&family=Oswald&display=swap');
+
+body {
+    background-image: linear-gradient(to top right, #2D31FA, #8C8EFC);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+  a {
+    text-decoration: none;
+    color: #2D31FA;
+  }
+  
+  a:hover{
+    color: #2D31FA;
+  }
+  
+  .main-container {
+    display: flex;
+    width: 70%;
+    height: 700px;
+    min-height: 80vh;
+    background-color: white;
+    margin: 10vh auto;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .main-container .hidden{
+    display: none;
+  }
+  
+  .login-link {
+    color: #777;
+  }
+  
+  .login-link:hover {
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .left-container {
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  left-container > * {
+    transition: all 0.3s;
+  }
+  
+  .right-container {
+    width: 60%;
+    height: 100%;
+    background-image: url('../img/login-bg.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+  }
+  .right-container2 {
+    width: 60%;
+    height: 100%;
+    background-image: url('../img/signup-bg.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+  }
+  .signup-form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .f1 {
+      font-family: 'cairo';
+      background: none;
+  }
+  .f2 {
+    font-family: 'cairo';
+    font-size: 22px;
+  }
+  .signup-form input {
+    border-radius: 150px;
+    padding: 5px 15px;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: #ddd;
+    color: #444;
+    border: none;
+  }
+  
+  .signup-form input {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    font-family: inherit;
+  }
+  
+  .signup-form input.first-name,
+  .signup-form input.last-name {
+    width: 48%;
+  }
+  
+  .signup-form input:focus {
+    outline: none;
+  }
+  
+  .signup-form input[type='checkbox']{
+    margin: 1rem 0.5rem 1rem 0;
+  }
+  
+  .signup-form input[type='checkbox'],
+  .signup-form input[type='checkbox'] + label {
+    display: inline-block;
+    width: auto;
+  }
+  
+  .signup-form .check{
+    display: flex;
+    align-items: center;
+  }
+  
+  .signup-form button {
+    color: white;
+    background-color: #2D31FA;
+    border: none;
+    padding: 1rem;
+    font-family: 'cairo';
+    border-radius: 10px;
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  
+  .signup-form button:hover{
+    background-color: #fff;
+    border: 2px solid #2D31FA;
+    color: #2D31FA;
+    cursor: pointer;
+  }
+  
+  button.disabled {
+    color: grey;
+    background-color: darkgrey;
+  }
+  
+  button.disabled:hover {
+    color: grey;
+    background-color: darkgrey;
+    cursor: unset;
+  }
+  
+  .signin-link {
+    color: #777;
+  }
+  
+  .signin-link:hover {
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @media (max-width:1240px){
+    .left-container{
+      width: 50%;
+    }
+    .right-container{
+      width: 50%;
+    }
+  }
+  
+  @media (max-width:970px){
+    .signup-form button{
+      font-size: 1rem;
+    }
+    .signup-form input[type="checkbox"] + label{
+      font-size: 0.8rem;
+    }
+    .signin-link{
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width:950px) {
+    .left-container{
+      width: 100%;
+      border-radius: 10px;
+    }
+    .main-container h1{
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .signup-form input{
+      margin-top: 0.5rem;
+    }
+    .right-container{
+      display: none;
+    }
+  }
+  
+  @media (max-width:550px){
+    .main-container{
+      width: 90%;
+      left: 5%;
+    }
+  }
+
+  /* sign up form*/
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+
+  
+  form {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+  
+  .t{
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-family: 'cairo', sans-serif;
+    font-weight: 400;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: .2px solid #ddd;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 15px 0;
+  }
+  
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+  
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #2D31FA;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    font-family: 'cairo';
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #2D31FA;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(242, 242, 246, 0.1) inset;
+    margin-bottom: 10px;
+  }
+  
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+    font-family: 'cairo';
+  }
+  
+
+  
+  label {
+    display: block;
+    font-family: 'cairo';
+    margin-bottom: 10px;
+  }
+  .labeltitle{
+    color: #2D31FA;
+    font-weight: 600;
+  }
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+  .number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+  
+  @media screen and (min-width: 480px) {
+  
+    form {
+      max-width: 480px;
+    }
+  
+  }
+
+
+  
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 16px;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+.titleform{
+  font-family: 'cairo';
+  font-size: 22px; 
+  font-weight: 600;
+}
+.form-label{
+  font-family: 'cairo';
+  font-size: 16px;
+  
+}
+.tit{
+font-family: 'cairo';
+color: blue;
+font-size: 16px;
+font-weight: 600;
+}
+.form-check{
+  color: #000;
+  font-family: 'cairo';
+}
+.btn{
+  font-family: 'cairo';
+}
+  
