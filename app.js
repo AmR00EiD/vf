@@ -1,23 +1,5 @@
-/////////////////////// dark mode /////////////////////////////
-// window.addEventListener("DOMContentLoaded", (event) => {
-//   // Get the checkbox element
-//   let checkbox = document.querySelector("input");
+////////////////// //// //// ///////// dark mode ///// //// //// ////////////////////////////
 
-//   // Get the body tag
-//   let body = document.querySelector("body");
-
-//   // This event handler listens for the checkbox to be checked or unchecked
-//   // Then, if the checkbox is checked (event.target.checked == true)
-//   // Then apply `data-theme="dark"` to the body tag
-//   // Otherwise, remove the attribute
-//   checkbox.addEventListener("change", (event) => {
-//     localStorage.setItem("checkbox", this.checked);
-//     event.target.checked
-//       ? body.setAttribute("data-theme", "dark")
-//       : body.removeAttribute("data-theme");
-//   });
-// });
-// Get the checkbox element
 let checkbox = document.querySelector("input");
 
 // Get the body tag
@@ -45,7 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   checkbox.checked = theme === "dark";
 });
 
-/// password hide and show password ////
+// //// //// //// //// //// ///// password hide and show password //// //// //// //// //// ////
 
 const input = document.querySelector(".input__field");
 const inputIcon = document.querySelector(".input__icon");
@@ -66,7 +48,7 @@ inputIcon.addEventListener("click", (e) => {
   );
 });
 
-/// slide in choose ////
+/// //// //// //// //// //// //// //// slide in choose //// //// //// //// //// //// //// //// ////
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -107,3 +89,22 @@ window.onload = function () {
 function frbtn() {
   document.getElementsByClassName("content").style.backgroundColor = "red";
 }
+
+/// //// //// //// //// //// //// ////  loader  //// //// //// //// //// //// //// //// ////
+
+// Get the loader element
+let loader = document.getElementById("spinner");
+
+// This event handler listens for the page to be fully loaded
+// Then, it hides the loader element
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+
+// This event handler listens for the user to leave the page
+// Then, it shows the loader element
+window.addEventListener("beforeunload", function () {
+  loader.style.display = "block";
+});
+
+/// //// //// //// //// //// //// ////  signup slider  //// //// //// //// //// //// //// //// ////
